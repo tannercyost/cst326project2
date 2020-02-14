@@ -259,6 +259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406602702}
+  - component: {fileID: 406602701}
   m_Layer: 0
   m_Name: Level 1-1
   m_TagString: Untagged
@@ -266,6 +267,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &406602701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406602700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6568559d6661b4eba05e67f1401a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  filename: Test
+  Rock: {fileID: 8525082524867589968, guid: e7e6d8ccc0a6d1542a9175cbe7fbb8a9, type: 3}
+  Brick: {fileID: 8525082524867589968, guid: d4618c9d3d995aa4d91462919172bc50, type: 3}
+  QuestionBox: {fileID: 8525082524867589968, guid: 257156139719b1b4fa79d46c51a8a6f0,
+    type: 3}
+  Stone: {fileID: 8525082524867589968, guid: f49af716c8418a74fa090ac5ff7be434, type: 3}
+  parentTransform: {fileID: 992824850}
 --- !u!4 &406602702
 Transform:
   m_ObjectHideFlags: 0
@@ -711,7 +731,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 992824850}
-  - component: {fileID: 992824851}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -727,31 +746,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992824849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -14.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 406602702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &992824851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992824849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6568559d6661b4eba05e67f1401a83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  filename: Test
-  Rock: {fileID: 8525082524867589968, guid: e7e6d8ccc0a6d1542a9175cbe7fbb8a9, type: 3}
-  Brick: {fileID: 8525082524867589968, guid: d4618c9d3d995aa4d91462919172bc50, type: 3}
-  QuestionBox: {fileID: 8525082524867589968, guid: 257156139719b1b4fa79d46c51a8a6f0,
-    type: 3}
-  Stone: {fileID: 8525082524867589968, guid: f49af716c8418a74fa090ac5ff7be434, type: 3}
-  parentTransform: {fileID: 992824850}
 --- !u!1 &1060525842
 GameObject:
   m_ObjectHideFlags: 0
