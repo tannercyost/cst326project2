@@ -40,6 +40,7 @@ public class LevelParserStarter : MonoBehaviour
                 {
                     Vector3 pos = new Vector3(column, row, 0);
                     SpawnPrefab(letter, pos);
+                    Debug.Log("Spawning " + letter + " at " + pos);
                     column++;
                 }
                 row++;
@@ -59,11 +60,9 @@ public class LevelParserStarter : MonoBehaviour
             case '?': ToSpawn = QuestionBox; break;
             case 'x': ToSpawn = Rock; break;
             case 's': ToSpawn = Stone; break;
-            //default: Debug.Log("Default Entered"); break;
             default: return;
-                //ToSpawn = //Brick;       break;
         }
-        Debug.Log("test");
+
         ToSpawn = GameObject.Instantiate(ToSpawn, parentTransform);
         ToSpawn.transform.localPosition = positionToSpawn;
     }
