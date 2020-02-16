@@ -39,7 +39,8 @@ public class LevelParserStarter : MonoBehaviour
                 foreach (var letter in letters)
                 {
                     Vector3 pos = new Vector3(column, -row, 0);
-                    SpawnPrefab(letter, pos);
+                    Quaternion rotation = Quaternion.Euler(0, -90, 0);
+                    SpawnPrefab(letter, pos, rotation);
                     Debug.Log("Spawning " + letter + " at " + pos);
                     column++;
                 }
@@ -50,7 +51,7 @@ public class LevelParserStarter : MonoBehaviour
         }
     }
 
-    private void SpawnPrefab(char spot, Vector3 positionToSpawn)
+    private void SpawnPrefab(char spot, Vector3 positionToSpawn, Quaternion rotation)
     {
         GameObject ToSpawn;
 
@@ -65,6 +66,7 @@ public class LevelParserStarter : MonoBehaviour
 
         ToSpawn = GameObject.Instantiate(ToSpawn, parentTransform);
         ToSpawn.transform.localPosition = positionToSpawn;
+        ToSpawn.transform.localRotation = rotation;
     }
 
     public void RefreshParse()
