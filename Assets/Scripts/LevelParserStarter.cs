@@ -41,7 +41,6 @@ public class LevelParserStarter : MonoBehaviour
                     Vector3 pos = new Vector3(column, -row, 0);
                     Quaternion rotation = Quaternion.Euler(0, -90, 0);
                     SpawnPrefab(letter, pos, rotation);
-                    Debug.Log("Spawning " + letter + " at " + pos);
                     column++;
                 }
                 row++;

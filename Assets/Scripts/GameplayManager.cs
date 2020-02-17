@@ -11,7 +11,6 @@ public class GameplayManager : MonoBehaviour
 
     public float countdown = 400;
     private int score = 0;
-    private int time = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,5 +22,22 @@ public class GameplayManager : MonoBehaviour
     {
         countdown -= Time.deltaTime;
         timeText.SetText("TIME \n" + (int) countdown);
+        scoreText.SetText("C:x0" + score);
+        if (Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
+            {
+                Transform objectHit = hit.transform;
+                GameObject obj = objectHit.gameObject;
+
+                if (obj.name == "QuestionBox(Clone)")
+                {
+                    score++;
+                }
+                Destroy(obj);
+            }
+        }
     }
 }
