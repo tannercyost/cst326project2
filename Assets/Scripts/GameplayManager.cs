@@ -9,7 +9,7 @@ public class GameplayManager : MonoBehaviour
     public TextMeshProUGUI timeText;
     public TextMeshProUGUI scoreText;
 
-    public float countdown = 400;
+    public float countdown = 100;
     private int score = 0;
     // Start is called before the first frame update
     void Start()
