@@ -279,12 +279,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6568559d6661b4eba05e67f1401a83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: Test
+  filename: Level01
   Rock: {fileID: 8525082524867589968, guid: e7e6d8ccc0a6d1542a9175cbe7fbb8a9, type: 3}
   Brick: {fileID: 8525082524867589968, guid: d4618c9d3d995aa4d91462919172bc50, type: 3}
   QuestionBox: {fileID: 8525082524867589968, guid: 257156139719b1b4fa79d46c51a8a6f0,
     type: 3}
   Stone: {fileID: 8525082524867589968, guid: f49af716c8418a74fa090ac5ff7be434, type: 3}
+  Goal: {fileID: 8525082524867589968, guid: 50e8ebd8517394547966774d261a4485, type: 3}
+  GoalTop: {fileID: 8525082524867589968, guid: b486b3f69fb58cd4c917d0bc69fb0e73, type: 3}
+  Water: {fileID: 8525082524867589968, guid: 2ac73b1a1550b9641ad4952ca75deb9a, type: 3}
   parentTransform: {fileID: 992824850}
 --- !u!4 &406602702
 Transform:
@@ -419,7 +422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeText: {fileID: 962894281}
   scoreText: {fileID: 945084384}
-  countdown: 400
+  countdown: 100
 --- !u!1 &596095745
 GameObject:
   m_ObjectHideFlags: 0
