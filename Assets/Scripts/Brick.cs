@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Brick : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private GameObject gm;
+    private GameplayManager gmS;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        gm = GameObject.Find("GameManager");
+        gmS = gm.GetComponent<GameplayManager>();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (gameObject.CompareTag("QuestionBox"))
+        {
+            gmS.addCoin();
+        }
+        else
+        {
+            gmS.addScore(100);
+        }
+        Destroy(gameObject);
     }
 }
