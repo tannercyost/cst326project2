@@ -11,10 +11,10 @@ public class GameplayManager : MonoBehaviour
 
     public float countdown;
     private int score = 0;
-    // Start is called before the first frame update
-    void Start()
+    
+    public void addScore (int score)
     {
-        
+        this.score += score;
     }
 
     // Update is called once per frame

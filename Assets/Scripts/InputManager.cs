@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
 
     [SerializeField] private float speedAmplifier = 1;
 
-    [SerializeField] private float jumpAmplifier = 5;
+    [SerializeField] private float jumpAmplifier = 1;
     [SerializeField] private bool isGrounded = false;
 
     private float lastYposition = 0;
@@ -37,12 +37,13 @@ public class InputManager : MonoBehaviour
 
             if (isGrounded && Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity = Vector3.up * jumpAmplifier;
+                rb.velocity = Vector3.down * jumpAmplifier;
+                rb.AddForce(Vector3.down * jumpAmplifier);
             }
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
-                speedAmplifier = 500;
+                speedAmplifier = 50;
             }
 
             if (Input.GetKeyUp(KeyCode.LeftShift))
