@@ -5,11 +5,9 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     public Transform target;
-    // Start is called before the first frame update
-
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
+        if (transform != null)
+            transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
     }
 }
